@@ -1,0 +1,77 @@
+void PanSharpener::handleFinishedResampleAll()
+{
+    delete watcher;
+    for (int i = 0; i < 4; i++)
+    {
+        string path = paths[i];
+        if (toUpdate[i] && path != "") loadImageSlot(i, path);
+    }
+    unlockChanges();
+}
+
+extern void rescaleAll(vector<string>& paths, vector<GDALDataset*>& images, GDALResampleAlg alg)
+{
+    for (int i = 0; i < 4; i++)
+    {
+            fs::path p = fs::path(paths[i]);
+            string newpath = p.parent_path().string() + "/" + p.stem().string() + "rescaled" + p.extension().string();
+            PansharpAlg::rescale(images[i], images[4], alg, newpath);
+    }
+}
+
+void PanSharpener::RescaleAllImages()
+{
+    if (images[4] == NULL)
+    {
+        QMessageBox reply;
+        reply.setText("You need to choose high-resolution image first.");
+        reply.setWindowTitle("Warning");
+        reply.setStandardButtons(QMessageBox::Ok);
+        reply.setDefaultButton(QMessageBox::Ok);
+        reply.setIcon(QMessageBox::Icon::Warning);
+        reply.setWindowFlags(Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint);
+        reply.exec();
+        return;
+    }
+    for (int i = 0; i < 4; i++)
+    {
+        if (images[i] != NULL && sizes[i][0] != sizes[4][0] && sizes[i][1] != sizes[4][1])
+        {
+            fs::path p = fs::path(paths[i]);
+            string newpath = p.parent_path().string() + "/" + p.stem().string() + "rescaled" + p.extension().string();
+            toUpdate[i] = true;
+            if (!removeFile(newpath))
+            {
+                QMessageBox reply;
+                QString message = QString::fromStdString("Can't update existing file " + p.stem().string() + "rescaled" + p.extension().string() + ". Probably it is being used somewhere else.");
+                reply.setText(message);
+                reply.setWindowTitle("Error");
+                reply.setStandardButtons(QMessageBox::Ok);
+                reply.setDefaultButton(QMessageBox::Ok);
+                reply.setIcon(QMessageBox::Icon::Warning);
+                reply.setWindowFlags(Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint);
+                reply.exec();
+                toUpdate[i] = false;
+            }
+        }
+        toUpdate[i] = false;
+    }
+
+    GDALResampleAlg alg = GRA_NearestNeighbour;
+    if (ui.resamplType2->isChecked()) alg = GRA_Bilinear;
+    else if (ui.resamplType3->isChecked()) alg = GRA_Cubic;
+    lockChanges("Images are rescaling");
+    watcher = new QFutureWatcher<void>();
+    QFuture<void> future;
+    connect(watcher, SIGNAL(finished()), this, SLOT(handleFinishedResampleAll()));
+    future = QtConcurrent::run(rescaleAll, paths, images, alg);
+    watcher->setFuture(future);
+    for (int i = 0; i < 4; i++)
+    {
+        if (toUpdate[i])
+        {
+            fs::path p = fs::path(paths[i]);
+            paths[i] = p.parent_path().string() + "/" + p.stem().string() + "rescaled" + p.extension().string();
+        }
+    }
+}

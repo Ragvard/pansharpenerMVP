@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Algos">
+      <UniqueIdentifier>{57829251-a78d-494d-bcaf-23b772d5323e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algos\Headers">
+      <UniqueIdentifier>{49081c77-204d-4a00-b988-a6bd8a99fd41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algos\Bodies">
+      <UniqueIdentifier>{144a6d17-6928-4d90-831c-e3ed70d7be57}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PanSharpener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Brovey.cpp">
+      <Filter>Algos\Bodies</Filter>
+    </ClCompile>
+    <ClCompile Include="Combine.cpp">
+      <Filter>Algos\Bodies</Filter>
+    </ClCompile>
+    <ClCompile Include="IHSSharpening.cpp">
+      <Filter>Algos\Bodies</Filter>
+    </ClCompile>
+    <ClCompile Include="Maximize.cpp">
+      <Filter>Algos\Bodies</Filter>
+    </ClCompile>
+    <ClCompile Include="PansharpAlg.cpp">
+      <Filter>Algos\Bodies</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleMean.cpp">
+      <Filter>Algos\Bodies</Filter>
+    </ClCompile>
+    <ClCompile Include="GramSchmidt.cpp">
+      <Filter>Algos\Bodies</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="PanSharpener.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="PanSharpener.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="PanSharpener.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="x64\Debug\uic\ui_PanSharpener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Brovey.h">
+      <Filter>Algos\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Combine.h">
+      <Filter>Algos\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="IHSSharpening.h">
+      <Filter>Algos\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Maximize.h">
+      <Filter>Algos\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="PansharpAlg.h">
+      <Filter>Algos\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleMean.h">
+      <Filter>Algos\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="gdalwarper.h">
+      <Filter>Algos\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GramSchmidt.h">
+      <Filter>Algos\Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>

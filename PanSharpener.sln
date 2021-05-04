@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PanSharpener", "PanSharpener\PanSharpener.vcxproj", "{7BD2F5BF-E0BF-4414-80F1-77C40B5A2E12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BD2F5BF-E0BF-4414-80F1-77C40B5A2E12}.Debug|x64.ActiveCfg = Debug|x64
+		{7BD2F5BF-E0BF-4414-80F1-77C40B5A2E12}.Debug|x64.Build.0 = Debug|x64
+		{7BD2F5BF-E0BF-4414-80F1-77C40B5A2E12}.Release|x64.ActiveCfg = Release|x64
+		{7BD2F5BF-E0BF-4414-80F1-77C40B5A2E12}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B74E65D-1AC9-44B0-A8E2-710E01B0EE23}
+	EndGlobalSection
+EndGlobal

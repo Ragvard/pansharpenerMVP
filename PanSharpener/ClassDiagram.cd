@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Ui_PanSharpenerClass">
+    <Position X="4.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UgCACAgjUzHAgecgiKZTARAgBATSYwgFhkEBAMOCR3U=</HashCode>
+      <FileName>x64\Debug\uic\ui_PanSharpener.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PanSharpener">
+    <Position X="12.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AHAJyFAG50QIEBAAADhAXkCBEAQJCQACAhAJABDQAlA=</HashCode>
+      <FileName>PanSharpener.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Brovey">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAEAgAAQAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Brovey.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Combine">
+    <Position X="12.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAABAABAAAA=</HashCode>
+      <FileName>Combine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IHSSharpening">
+    <Position X="8.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAQAAEAAAAAAAAAABAAAAAAAAABAAAA=</HashCode>
+      <FileName>IHSSharpening.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Maximize">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIAAABAAAA=</HashCode>
+      <FileName>Maximize.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PansharpAlg">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAABAAAACAAAAIAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>PansharpAlg.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleMean">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>SimpleMean.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui::PanSharpenerClass" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>x64\Debug\uic\ui_PanSharpener.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
